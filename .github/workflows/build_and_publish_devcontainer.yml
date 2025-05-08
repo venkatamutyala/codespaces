@@ -1,7 +1,6 @@
 name: 'Build and Publish devcontainer image' 
 on:
-  release:
-    types: [published]
+  push:
 
 jobs:
   build:
