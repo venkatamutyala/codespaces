@@ -56,21 +56,21 @@ RUN curl -Lo /usr/local/bin/kubectl https://dl.k8s.io/release/v${VERSION_KUBECTL
     && curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | TAG=v${VERSION_K3D} bash
 
 
-ENV CLOUDSDK_COMPONENT_MANAGER_FIXED_SDK_VERSION=${VERSION_GCLOUD_SDK}
-# Below includes cleanup to save space after the gcloud install: https://stackoverflow.com/questions/60827959/how-to-stop-gcloud-component-update-from-keeping-a-backup
-RUN curl -sSL https://sdk.cloud.google.com | bash \
-    && export PATH=$PATH:/usr/local/gcloud/google-cloud-sdk/bin \
-    && gcloud components install gke-gcloud-auth-plugin --quiet \
-    && gcloud components install alpha --quiet \
-    && gcloud components install beta --quiet \
-    && rm -rf $(find /usr/local/gcloud/google-cloud-sdk/ -regex ".*/__pycache__") \
-    && rm -rf /usr/local/gcloud/google-cloud-sdk/.install/.backup \
-    && rm -rf /usr/local/gcloud/google-cloud-sdk/lib/third_party/apis \
-    && rm -rf /usr/local/gcloud/google-cloud-sdk/bin/anthoscli \
-    && apt update \
-    && apt install tmux dnsutils telnet iputils-ping jq certbot nethogs nload vim -y \
-    && apt clean -y
-ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin
+# ENV CLOUDSDK_COMPONENT_MANAGER_FIXED_SDK_VERSION=${VERSION_GCLOUD_SDK}
+# # Below includes cleanup to save space after the gcloud install: https://stackoverflow.com/questions/60827959/how-to-stop-gcloud-component-update-from-keeping-a-backup
+# RUN curl -sSL https://sdk.cloud.google.com | bash \
+#     && export PATH=$PATH:/usr/local/gcloud/google-cloud-sdk/bin \
+#     && gcloud components install gke-gcloud-auth-plugin --quiet \
+#     && gcloud components install alpha --quiet \
+#     && gcloud components install beta --quiet \
+#     && rm -rf $(find /usr/local/gcloud/google-cloud-sdk/ -regex ".*/__pycache__") \
+#     && rm -rf /usr/local/gcloud/google-cloud-sdk/.install/.backup \
+#     && rm -rf /usr/local/gcloud/google-cloud-sdk/lib/third_party/apis \
+#     && rm -rf /usr/local/gcloud/google-cloud-sdk/bin/anthoscli \
+#     && apt update \
+#     && apt install tmux dnsutils telnet iputils-ping jq certbot nethogs nload vim -y \
+#     && apt clean -y
+# ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin
 
 RUN apt update \
     && apt install tmux dnsutils telnet iputils-ping jq certbot -y \
