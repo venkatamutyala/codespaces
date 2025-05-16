@@ -5,9 +5,8 @@
 
 
 # Checklist for changes
---target main +title+ PR Checklist
---target main --source-except renovate/* +task+ Is the README.md up to date with the latest changes?
---target main --source-except renovate/* +task+ If possible, was the code tested end-to-end (E2E)?
+--target main +title+ PR Checklist (required):
+--target main +task+ Is the README.md up to date?
+--target main +task+ If possible, was the code tested end-to-end (E2E)?
 --target main --source-except renovate/* +task+ Did you review any AI provided feedback?
 --target main --source renovate/* +task+ Did you review the release notes for this automated update?
-  
