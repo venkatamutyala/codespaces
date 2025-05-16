@@ -8,3 +8,4 @@ sudo rm -rvf /var/lib/cloud/instances /etc/machine-id /var/lib/dbus/machine-id /
 sudo touch /etc/machine-id
 sudo rm /root/.ssh/authorized_keys || true
 sudo rm /home/admin/.ssh/authorized_keys || true
+asdasd
