@@ -8,7 +8,7 @@ source "amazon-ebs" "cde" {
   source_ami_filter {
     filters = {
       virtualization-type = "hvm"
-      name                = "debian-12-amd64-*"
+      name                = "debian-12-amd64-*"asdasd
       root-device-type    = "ebs"
     }
     owners      = ["136693071363"] # Amazon
