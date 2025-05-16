@@ -5,8 +5,12 @@
 
 
 # Checklist for changes
+
+# Checklist for changes
 --target main +title+ PR Checklist (required):
 --target main +task+ Is the README.md up to date?
 --target main +task+ Code tested appropriately (end-to-end considered)?
+--target main --source-except renovate/* +title+ PR Checklist (required):
 --target main --source-except renovate/* +task+ Did you review any AI provided feedback?
+--target main --source renovate/* +title+ PR Checklist (required):
 --target main --source renovate/* +task+ Did you review the release notes for this automated update?
