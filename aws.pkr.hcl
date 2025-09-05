@@ -1,7 +1,7 @@
 #https://github.com/GlueOps/codespaces/pkgs/container/codespaces
 variable "glueops_codespaces_container_tag" {
   type    = string
-}
+}asdasd
 
 source "amazon-ebs" "cde" {
   region     = "us-west-2"
