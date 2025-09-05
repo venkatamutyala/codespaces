@@ -7,3 +7,6 @@ sudo cloud-init status --wait
 echo "update packages..."
 sudo apt-get update
 
+
+
+
