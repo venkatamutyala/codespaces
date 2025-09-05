@@ -6,6 +6,9 @@ variable "image_password" {
   type    = string
 }
 
+
+
+
 source "qemu" "qemu-amd64" {
   iso_url           = "https://cloud.debian.org/images/cloud/bookworm/20241004-1890/debian-12-generic-amd64-20241004-1890.qcow2"
   iso_checksum      = "file:https://cloud.debian.org/images/cloud/bookworm/20241004-1890/SHA512SUMS"
