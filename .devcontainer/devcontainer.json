@@ -18,21 +18,17 @@
 		"VERSION": "${localEnv:VERSION}"
 	},
 	"features": {
-		"ghcr.io/tailscale/codespace/tailscale": {
-    			"version": "latest"
-  		},
 		"docker-in-docker": "latest",
 		"docker-from-docker": "latest",
 		"git": "latest",
 		"git-lfs": "latest",
 		"github-cli": "latest",
-		"aws-cli": "latest",
-		"sshd": "latest",
+		//"aws-cli": "latest",
+		//"sshd": "latest",
 		"node": "22.14.0",
 		"python": {
-			"version" : "3.11.11",
-			"installTools" : true,
-			"toolsToInstall": "flake8,autopep8,black,yapf,mypy,pydocstyle,pycodestyle,bandit,pipenv,virtualenv,pytest,pylint,pyaml"
+			"version" : "3.11.13",
+			"installTools" : false
 		}
 	}
 }
